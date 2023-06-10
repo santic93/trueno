@@ -64,3 +64,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
+////colorear secciones mientras navego 
+  // Obtener todas las secciones y enlaces de la barra de navegación
+    var secciones = document.querySelectorAll("section");
+    var enlaces = document.querySelectorAll(".opcion");
+
+    // Función para resaltar la sección correspondiente al enlace activo
+    function resaltarSeccion() {
+      var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Iterar sobre todos los enlaces y verificar cuál corresponde a la sección actual
+      for (var i = 0; i < enlaces.length; i++) {
+        var enlace = enlaces[i];
+        var seccionId = enlace.getAttribute("href");
+        var seccion = document.querySelector(seccionId);
+
+        if (
+          seccion.offsetTop <= scrollPos &&
+          seccion.offsetTop + seccion.offsetHeight > scrollPos
+        ) {
+          enlace.classList.add("highlighted");
+        } else {
+          enlace.classList.remove("highlighted");
+        }
+      }
+    }
+
+    // Asociar la función resaltarSeccion al evento scroll
+    window.addEventListener("scroll", resaltarSeccion);

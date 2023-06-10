@@ -216,3 +216,13 @@ li{
   font-weight: bold;
   font-size: 600;
 }
+
+
+/* Estilo para la sección resaltada */
+.highlighted {
+  color: whitesmoke;
+  background-color: black;
+  font-weight: bold;
+  max-width: 100%;
+  box-shadow: 0px 0px 10px rgb(98, 216, 98);
+}
