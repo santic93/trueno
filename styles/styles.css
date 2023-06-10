@@ -1,0 +1,218 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inconsolata', monospace;  
+}
+section {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+section * {
+  margin: 0;
+  padding: 0;
+}
+.botonera {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 200px; /* Ajusta la altura según tus necesidades */
+}
+
+.opcion {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #eaeaea;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s; /* Agregamos una transición suave */
+  width: 200px; /* Ancho fijo para los botones */
+}
+.opcion:hover {
+  color: whitesmoke;
+  background-color: black;
+  font-weight: bold;
+  max-width: 100%;
+  box-shadow: 0px 0px 10px rgb(98, 216, 98);
+}
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#text {
+  color: antiquewhite;
+  opacity: 0;
+  font-size: 26px;
+  text-align: center;
+  animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#seccion1 {
+  background-image: url('../images//vida.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: antiquewhite;
+}
+
+#seccion2 {
+  background-image: url('../images//discografia.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: antiquewhite;
+}
+
+#seccion3 {
+  background-image: url('../images//redes.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: antiquewhite;
+}
+#principal {
+  text-align: center;
+  background-image: url('../images//tru.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+.active-link {
+  color: whitesmoke;
+  background-color: black;
+  font-weight: bold;
+  max-width: 100%;
+  justify-content: center;
+  color: antiquewhite;
+  box-shadow: 0px 0px 10px rgb(98, 216, 98);
+  font-style: italic;
+}
+
+li{
+  list-style: none;
+}
+.discos {
+  text-align: center;
+}
+
+.imagenes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.imagenes li {
+  margin: 10px;
+  opacity: 0;
+}
+
+.imagenes li.aparecer {
+  animation: aparecer 1s ease-out forwards;
+}
+
+.imagenes img {
+  width: 250px;
+  height: auto;
+ box-shadow: 5px 5px 10px rgba(233, 239, 233, 0.5);
+}
+
+@keyframes aparecer {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.sencillos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+}
+
+.senciImg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: slide-in 1s ease-in-out;
+}
+
+.senciImg li {
+  flex-basis: calc(33.33% - 55px);
+  margin: 5px; 
+}
+
+.senciImg img {
+  width: 45%; 
+  height: auto;
+   box-shadow: 5px 5px 10px rgba(233, 239, 233, 0.5); 
+}
+
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.imagen-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+.imagen-item span {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 600;
+}
