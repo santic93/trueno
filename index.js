@@ -91,4 +91,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
 
     // Asociar la función resaltarSeccion al evento scroll
-    window.addEventListener("scroll", resaltarSeccion);
+window.addEventListener("scroll", resaltarSeccion);
+    
+///footer siembre abajo
+window.addEventListener('scroll', function () {
+  var footer = document.querySelector('footer');
+  var scrollPosition =
+    window.pageYOffset ||
+    document.documentElement.scrollTop ||
+    document.body.scrollTop ||
+    0;
+  var windowHeight =
+    window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.body.clientHeight ||
+    0;
+  var bodyHeight = Math.max(
+    document.body.scrollHeight,
+    document.documentElement.scrollHeight,
+    document.body.offsetHeight,
+    document.documentElement.offsetHeight,
+    document.body.clientHeight,
+    document.documentElement.clientHeight
+  );
+
+  if (scrollPosition + windowHeight >= bodyHeight) {
+    footer.style.display = 'block';
+  } else {
+    footer.style.display = 'none';
+  }
+});

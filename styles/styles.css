@@ -3,7 +3,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Inconsolata', monospace;  
+  font-family: 'Inconsolata', monospace;
 }
 section {
   height: 100vh;
@@ -123,7 +123,7 @@ section * {
   font-style: italic;
 }
 
-li{
+li {
   list-style: none;
 }
 .discos {
@@ -148,7 +148,7 @@ li{
 .imagenes img {
   width: 250px;
   height: auto;
- box-shadow: 5px 5px 10px rgba(233, 239, 233, 0.5);
+  box-shadow: 5px 5px 10px rgba(233, 239, 233, 0.5);
 }
 
 @keyframes aparecer {
@@ -166,7 +166,7 @@ li{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .senciImg {
@@ -182,15 +182,14 @@ li{
 
 .senciImg li {
   flex-basis: calc(33.33% - 55px);
-  margin: 5px; 
+  margin: 5px;
 }
 
 .senciImg img {
-  width: 45%; 
+  width: 45%;
   height: auto;
-   box-shadow: 5px 5px 10px rgba(233, 239, 233, 0.5); 
+  box-shadow: 5px 5px 10px rgba(233, 239, 233, 0.5);
 }
-
 
 @keyframes slide-in {
   0% {
@@ -209,14 +208,11 @@ li{
   text-align: center;
 }
 
-
-
 .imagen-item span {
   margin-top: 10px;
   font-weight: bold;
   font-size: 600;
 }
-
 
 /* Estilo para la sección resaltada */
 .highlighted {
@@ -226,4 +222,32 @@ li{
   max-width: 100%;
   box-shadow: 0px 0px 10px rgb(98, 216, 98);
   justify-content: center;
+}
+footer {
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.redes {
+  display: flex;
+  justify-content: center;
+}
+
+.red-social {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.red-social img {
+  width: 30px; /* ajusta el tamaño de las imágenes según tus necesidades */
+  height: 30px; /* ajusta el tamaño de las imágenes según tus necesidades */
+  transition: filter 0.3s ease;
+}
+
+.red-social:hover img {
+  /* ajusta el efecto de brillo al pasar el mouse */
+  filter: invert(100%);
 }
