@@ -252,14 +252,20 @@ footer {
   filter: invert(100%);
 }
 
-
-.sen{
-  color: #AAD43D;
+.sen {
+  color: #aad43d;
   font-weight: 600;
 }
 
-   /* Media Queries */
+/* Media Queries */
 @media (max-width: 768px) {
+  #seccion1,
+  #seccion2,
+  #seccion3,
+  #principal {
+    background-size: contain; /* Ajusta la imagen para que se ajuste a la pantalla */
+    background-attachment: scroll; /* Evita el efecto de parallax */
+  }
   #text {
     font-size: 20px; /* Tamaño ajustado para tablets */
   }
@@ -289,6 +295,15 @@ footer {
 }
 
 @media (max-width: 480px) {
+  #seccion1,
+  #seccion2,
+  #seccion3,
+  #principal {
+    background-size: cover; /* Mantiene el tamaño de la imagen de fondo cubriendo el área */
+    background-position: center top; /* Ajusta la posición de la imagen para móviles */
+    padding: 20px; /* Agrega un poco de padding para evitar que el contenido quede demasiado pegado a los bordes */
+    text-align: center; /* Asegura que el texto esté centrado */
+  }
   #text {
     font-size: 16px; /* Tamaño ajustado para móviles */
   }
