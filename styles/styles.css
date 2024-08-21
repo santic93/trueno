@@ -260,6 +260,9 @@ footer {
 
    /* Media Queries */
 @media (max-width: 768px) {
+  #text {
+    font-size: 20px; /* Tamaño ajustado para tablets */
+  }
   .botonera {
     height: auto;
     flex-direction: row;
@@ -286,6 +289,9 @@ footer {
 }
 
 @media (max-width: 480px) {
+  #text {
+    font-size: 16px; /* Tamaño ajustado para móviles */
+  }
   .botonera {
     flex-direction: column;
     align-items: center;
