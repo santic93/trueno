@@ -305,7 +305,8 @@ footer {
     text-align: center; /* Asegura que el texto esté centrado */
   }
   #text {
-    font-size: 16px; /* Tamaño ajustado para móviles */
+    font-size: 10px; /* Tamaño ajustado para móviles */
+    font-weight: bold;
   }
   .botonera {
     flex-direction: column;
