@@ -162,14 +162,14 @@ li {
   }
 }
 
-.sencillos {
+/* .sencillos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.senciImg {
+/* .senciImg {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -178,18 +178,18 @@ li {
   padding: 0;
   margin: 0;
   animation: slide-in 1s ease-in-out;
-}
+} */
 
-.senciImg li {
+/* .senciImg li {
   flex-basis: calc(33.33% - 55px);
   margin: 5px;
-}
+} */
 
-.senciImg img {
+/* .senciImg img {
   width: 45%;
   height: auto;
   box-shadow: 5px 5px 10px rgba(233, 239, 233, 0.5);
-}
+} */
 
 @keyframes slide-in {
   0% {
@@ -258,77 +258,54 @@ footer {
 }
 
 /* Media Queries */
+/* Ajustes generales */
+.sencillos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Añade padding para evitar que el contenido se salga del área visible */
+  max-width: 1200px; /* Limita el ancho máximo para que no se estire demasiado en pantallas grandes */
+  margin: 0 auto; /* Centra la sección */
+}
+
+.senciImg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.senciImg li {
+  flex-basis: calc(33.33% - 20px); /* Tres elementos por fila en pantallas grandes */
+  margin: 10px;
+  box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho/alto total */
+}
+
+.senciImg img {
+  width: 100%;
+  height: auto;
+  box-shadow: 5px 5px 10px rgba(233, 239, 233, 0.5);
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-  #seccion1,
-  #seccion2,
-  #seccion3,
-  #principal {
-    background-size: contain; /* Ajusta la imagen para que se ajuste a la pantalla */
-    background-attachment: scroll; /* Evita el efecto de parallax */
-  }
-  #text {
-    font-size: 20px; /* Tamaño ajustado para tablets */
-  }
-  .botonera {
-    height: auto;
-    flex-direction: row;
-    overflow-x: auto;
-  }
-
-  .opcion {
-    width: auto;
-    margin: 5px;
-    padding: 5px;
-  }
-
-  .imagen-item {
-    flex-direction: column;
-  }
-
   .senciImg li {
-    flex-basis: calc(50% - 10px);
-  }
-
-  .senciImg img {
-    width: 80%;
+    flex-basis: calc(50% - 20px); /* Dos elementos por fila en pantallas medianas */
+    margin: 10px;
   }
 }
 
 @media (max-width: 480px) {
-  #seccion1,
-  #seccion2,
-  #seccion3,
-  #principal {
-    background-size: cover; /* Mantiene el tamaño de la imagen de fondo cubriendo el área */
-    background-position: center top; /* Ajusta la posición de la imagen para móviles */
-    padding: 20px; /* Agrega un poco de padding para evitar que el contenido quede demasiado pegado a los bordes */
-    text-align: center; /* Asegura que el texto esté centrado */
-  }
-  #text {
-    font-size: 10px; /* Tamaño ajustado para móviles */
-    font-weight: bold;
-  }
-  .botonera {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-  .opcion {
-    width: 100%;
-    margin: 5px 0;
-    padding: 10px;
-  }
-
-  .imagenes img {
-    width: 100%;
-  }
-
   .senciImg li {
-    flex-basis: calc(100% - 10px);
+    flex-basis: 100%; /* Un solo elemento por fila en pantallas pequeñas */
+    margin: 10px 0; /* Espacio entre elementos en columna */
   }
 
   .senciImg img {
-    width: 100%;
+    width: 90%; /* Reduce ligeramente el ancho para que no quede tan pegado a los bordes */
   }
 }
